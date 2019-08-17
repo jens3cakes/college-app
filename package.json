@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "npx nodemon ./server/server.js & ng serve --host 0.0.0.0",
-    "migrate": "POSTGRES_HOPSTNAME=localhost POSTGRES_CONTAINER_PORT=5432 npx knex --knexfile ./server/knexfile.js migrate:latest",
+    "dev": "./node_modules/.bin/nodemon ./server/server.js",
+    "migrate": "POSTGRES_HOSTNAME=localhost POSTGRES_CONTAINER_PORT=5432 npx knex --knexfile ./server/knexfile.js migrate:latest",
     "db:seed": "POSTGRES_HOSTNAME=localhost POSTGRES_CONTAINER_PORT=5432 npx knex --knexfile ./server/knexfile.js seed:run",
     "rollback": "POSTGRES_HOSTNAME=localhost POSTGRES_CONTAINER_PORT=5432 npx knex --knexfile ./server/knexfile.js migrate:rollback"
   },

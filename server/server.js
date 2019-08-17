@@ -16,12 +16,13 @@ app.use(express.static(path.join(__dirname + "public")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('smoke', (req,res)=> {
+app.get('/smoke', (req,res)=> {
+  console.log('hello')
   res.send('Fire Fire')
 });
 
 const server = http.createServer(app);
 
 app.listen(PORT, () =>{
-  console.log(`Server listening on ${PORT}`)
+  console.log(`Server listening in on ${PORT}`)
 });
